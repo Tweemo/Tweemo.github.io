@@ -1,17 +1,20 @@
 <Style>
 .pic {
     border-radius: 50%;
-    width: 350px;
+    max-width: 400px;
+    max-height: 400px;
 }
 .info-pic {
     display: flex;
-    align-content: center;
-    margin: 0px 0px 0px 370px;
+    margin: 0px 0px 0px 100px;
+    flex-flow:row wrap;
 }
 
 .info {
     display: block;
-    width: 50%;
+    max-width: 40%;
+    padding-right: 100px;
+    padding-left: 120px;
 }
 
 .title {
@@ -22,6 +25,27 @@
   text-align: center;
 }
 
+.linkedin {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.github {
+  border-radius: 50%;
+  max-width: 50px;  
+  max-height: 50px; 
+}
+
+.article {
+  order: 2; min-width: 12em; flex: 1;
+}
+
+.nav {
+  order: 1; width: 200px;
+}
+
+
 .tiny-intro {
   text-align: center;
 }
@@ -31,11 +55,17 @@
   <head>
     <link href="/Users/timl/Desktop/DevAcademy/Tweemo.github.io/styles/main.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
-    <title>My blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/Users/timl/Desktop/DevAcademy/Tweemo.github.io/images/favicon.ico" type="image/x-icon">
+
+    <title>Tim Liew</title>
 
   </head>
 
   <body>
+    <header>
     <h1 class="title">Hello World! My name is Tim Liew!</h1>
 
     <h2 class="subtitle">Welcome to my blog where I will post all my progress and struggles in foundation. But first a little intro.</h2>
@@ -43,7 +73,13 @@
     <p class="tiny-intro">
       I'm a student web developer at Dev Academy currently living in Wellington, New Zealand.
     </p>
-  <div class="info-pic">
+  </header>
+
+  <article class="info-pic">
+    <nav>
+      <a href="index.html"><h2>Home</h2></a> 
+      <a href="###"><h2>Blog</h2></a>
+    </nav>
     <div class="info">
         <h3>Background</h3>
 
@@ -51,9 +87,13 @@
           I was born and raised in Wellington and therefore have suffered horrendous allergies ever since. 
           Since a young age, I have always been interested in games and all things relating to games, including programming. 
           Though I never saw programming as a career that I could get into as it seemed like it was too difficult. 
+          <br>
+          <br>
           Fast forward a little, I studied at the Univeristy of Otago and received my Bachelor of Pharmacy with distinction (woo woo) and had been working in a pharmacy ever since. 
           Working in that environment in general and through COVID made me realise how much I really don't want to be in that industry. 
-          Now I hear some of my friends are taking this course of Dev Academy and they're loving it, So I ask about it. 
+          <br>
+          <br>
+          Now I hear some of my friends are taking this course of Dev Academy and they're loving it, so I ask about it. 
           From then on, I decided that this is a good opportunity to make a major career shift to something that I will most likely enjoy because in a sense it is like an extension of one of my biggest hobbies. 
         </p>
 
@@ -63,8 +103,15 @@
           But in the future it would be nice to learn and become proficient in different techonologies.
         </p>
     </div>
-      <img class="pic" src="/Users/timl/Desktop/profile.jpeg" alt="Picture of myself by the beach"> 
-  </div>
+    <span>
+    <img class="pic" src="/Users/timl/Desktop/profile.jpeg" alt="Picture of myself by the beach"> 
+    <br>
+    <a href="https://github.com/Tweemo"><img class="github" src="/Users/timl/Desktop/DevAcademy/Tweemo.github.io/images/Github-logo.png" alt="Github logo" link=""></a>
+    <a href="https://www.linkedin.com/in/tim-liew-a9572b20b/"><img class="linkedin" src="/Users/timl/Desktop/DevAcademy/Tweemo.github.io/images/Linkedin-logo.png" alt="Linkedin logo"></a>
+   </span> 
+  </article>
   </body>
+<footer>
 
+</footer>
 </html>
