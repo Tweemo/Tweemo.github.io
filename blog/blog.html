@@ -82,44 +82,40 @@
     top: 20px; <br><br> 
     </p>
     
-    With the code we can interpret that the left edge of our green box is now 60px from the original location. The same can be said about the top edge as it is 20px from where the top edge was. 
+    We can interpret that the left edge of our green box is now 60px from the box's original location. The same can be said about the top edge as it is 20px from where the top edge was. 
 
 
 <h3>Absolute Positioning</h3>
     <p>
         Absolute positioning is a type of positioning that shifts the element in relation to the nearest containing element with a position.
-        When there are two elements that have positions they are considered the 'parent' and the 'child' elements.
+        Where there are two elements that have positions, the element we want to move is considered the 'child' and the nearest element with a position becomes the 'parent'.
         <br><br>
         When we give a position for the 'child' element it will use the side of the 'parent' and compare it to the same 'child' side. 
        However, when there is no 'parent' or the 'parent' element is static, the 'parent' becomes the viewport/browser. 
 <br><br>
-        Elements with absolute positioning ARE removed from the document flow. 
-        This means other elements will fill in the space no longer occupied by the 'child' element. 
+        Elements with absolute positioning ARE removed from the document flow which means other elements will fill in the space no longer occupied by the 'child' element. 
     </p>
 
     <img class="images" src="../images/absolute-position.png" alt="Absolute position diagram"> 
     <p>In this example, there are no 'parents' thus the 'parent' becomes the viewport/browser. 
-    By using the code: <br><br> position: absolute; <br> top:100px; <br> left: 30px; <br><br> We can see that the box has moved 100px from the top and 30px from the left. 
+    By using the code: <br><br> position: absolute; <br> top:100px; <br> left: 30px; <br><br> We can see that the box has a 100px space from the top and 30px space from the left. 
 </p>
 
 <h3>Fixed Positioning</h3>
     <p>
-        Fixed positioning is a type of positioning based on the viewport (browser), this means the 'parent' of the element will be viewport. 
+        Fixed positioning is a type of positioning based on the viewport/browser, this means the 'parent' of the element will be viewport/browser. 
         The way you would move elements with fixed positioning will be similar to how the example above. 
         <br><br>
-        However, bear in mind that fixed will stay on top of your content and will stay in the same position even if you scroll. 
-        The two positioning types are affected by scrolling, which means the element will not follow you when you scroll.
-       <br><br>
-        Elements with fixed positioning will move when the viewport is resized and it will sit infront of other content.
-        Since fixed positioning is always relative to the viewport, it will stay in the same position even if you scroll down the page. 
-
+        However, bear in mind that fixed will stay on top of your content and will stay in the same position when you scroll down the page. 
+        The other two positioning types are affected by scrolling, which means the element will not follow you when you scroll.
+        Fixed positioned elements will move when the viewport/browser is resized to maintain the same position.
     </p>
 
     <img class="images" src="../images/fixed-position.png" alt="fixed position diagram">
     </div>
 </div>
-
-<footer class="footer"><p>All images provided by <a href="https://www.csssolid.com/css-position.html">csssolid</a>. All code is not to scale. :)    </p> </footer>
+<br><br>
+<footer class="footer"><p>All images provided by <a href="https://www.csssolid.com/css-position.html">csssolid</a>. All code is not to scale and only used as examples. :)    </p> </footer>
 
 </body>
 
