@@ -8,17 +8,21 @@
         display: flex;
         margin: 0px 0px 0px 100px;
         flex-flow:row wrap;
+        padding-top: 20px;
     }
     
+.title {
+    text-align: center;
+    display: block;
+    background-color: #e0fffc;
+    height: 180px;
+    }
+
     .info {
         display: block;
         max-width: 40%;
         padding-right: 100px;
         padding-left: 120px;
-    }
-    
-    .title {
-      text-align: center;
     }
     
     .subtitle {
@@ -37,17 +41,12 @@
       max-height: 50px; 
     }
     
-    .article {
-      order: 2; min-width: 12em; flex: 1;
-    }
-    
-    .nav {
-      order: 1; width: 200px;
-    }
-    
-    
     .tiny-intro {
       text-align: center;
+    }
+
+    .index-link {
+      background-color: aquamarine;
     }
     </Style>
     
@@ -65,21 +64,22 @@
       </head>
     
       <body>
-        <header>
-        <h1 class="title">Hello World! My name is Tim Liew!</h1>
+        <header class="title">
+        <h1>Hello World! My name is Tim Liew!</h1>
     
-        <h2 class="subtitle">Welcome to my blog where I will post all my progress and struggles in foundations. But first a little intro.</h2>
+        <h2>Welcome to my blog where I will post all my progress and struggles in foundations. But first a little intro.</h2>
     
-        <p class="tiny-intro">
+        <p>
           I'm a student web developer at Dev Academy currently living in Wellington, New Zealand.
         </p>
-      </header>
+        </header>
     
       <article class="info-pic">
-        <nav>
-          <a href="index.html"><h2>Home</h2></a> 
-          <a href="blog/blog.html"><h2>Blog</h2></a>
-        </nav>
+        <ul>
+          <li><a class="index-link" href="index.html">Home</a></li>
+          <li><a href="blog/blog.html">Blog</a></li>
+        </ul>
+
         <div class="info">
             <h3>Background</h3>
     
