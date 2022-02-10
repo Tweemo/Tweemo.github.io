@@ -15,6 +15,16 @@
 .blog-link {
     background-color: aquamarine;
 }
+
+.footer {
+    text-align: center;
+}
+
+.images{
+    max-width: 70%;
+    max-height: 70%;
+}
+
 </style>
 
 <html>
@@ -45,34 +55,73 @@
         <h3>Document flow</h3>
     <p>Before I get into the difference between relative, absolute and fixed positioning, I need to explain what document flow is.
         Document flow is the arrangement of page elements based off CSS positioning and the order of HTML.
-        Document flow will normally follow the order in which the elements are entered into HTML which wil be left to right unless they are blocks which mean the order will be top to bottom.
-        CSS positioning allows the elements in this flow to be moved and different positioning will affect the flow differently.
+        <br> <br>
+        Document flow will normally follow the order in which the elements are entered into HTML. This order will depend on what elements are used, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">inline elements</a> will be ordered left to right and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">block elements</a> will be ordered top to bottom.
+        CSS positioning allows the elements in this flow to be moved and different positioning can affect the flow differently.
+        <br><br>
+        For our examples we will be using boxes to represent elements.
     </p>
+
+    <img class="images" src="../images/static-position.png" alt="Static position diagram">
+    <p>In this example, our elements are block elements which explains the top-down order.</p>
 
     <h3>Relative Positioning</h3>
-    <p>Relative positioning means that the element that you are moving will be moved in relation to where it would have gone originally. 
-        To put it into context, if the box was going to be placed here, if we use position:relative; top: 100px; then the element will 100px away from the top edge.
-    It is important to be aware relative position does not move the element away from the document flow. 
-    This means that even though we perceive the element at a different position, it still occupies the original space.</p>
+    <p>
+    Relative positioning is a type of positioning that moves the desired element in relation to its original location. 
+    It is important to be aware that relative position does not remove the element from the document flow and thus other elements will not fill the empty space.
+  <br><br>
+    In this example, the element we want to move is the green box. 
+    The location at where this green box ends up will be based on where it originally was.
+    The original location is shown by the blue outline. 
+</p>
+
+    <img class="images" src="../images/relative-position.png" alt="Relative position diagram">
+    <p>The position of the green box is as follows: <br><br>
+    position: relative; <br>
+    left: 60px; <br>
+    top: 20px; <br><br> 
+    </p>
+    
+    With the code we can interpret that the left edge of our green box is now 60px from the original location. The same can be said about the top edge as it is 20px from where the top edge was. 
+
+
 <h3>Absolute Positioning</h3>
     <p>
-        absolute positioning means that the element will be positioned in relation to the nearest containing element with a position.
-        This means that with absolute positioning it will always involve two elements that have positions, one being the 'parent' element and the 'child'.
+        Absolute positioning is a type of positioning that shifts the element in relation to the nearest containing element with a position.
+        When there are two elements that have positions they are considered the 'parent' and the 'child' elements.
+        <br><br>
         When we give a position for the 'child' element it will use the side of the 'parent' and compare it to the same 'child' side. 
-        For example; If we give the 'child' a position: absolute; left: 30px; This will move the 'child' element so that its left side will be 30px away from the 'parents' left side. 
-        elements with absolute positioning ARE removed from the document flow. 
-        Which means that elements originally below our 'child' element will move up to fill in the space as the 'child' has been position elsewhere.
-
+       However, when there is no 'parent' or the 'parent' element is static, the 'parent' becomes the viewport/browser. 
+<br><br>
+        Elements with absolute positioning ARE removed from the document flow. 
+        This means other elements will fill in the space no longer occupied by the 'child' element. 
     </p>
+
+    <img class="images" src="../images/absolute-position.png" alt="Absolute position diagram"> 
+    <p>In this example, there are no 'parents' thus the 'parent' becomes the viewport/browser. 
+    By using the code: <br><br> position: absolute; <br> top:100px; <br> left: 30px; <br><br> We can see that the box has moved 100px from the top and 30px from the left. 
+</p>
+
 <h3>Fixed Positioning</h3>
     <p>
-        Fixed positioning is positioning based on the viewport (browser), this means the 'parent' of the element will be viewport. 
+        Fixed positioning is a type of positioning based on the viewport (browser), this means the 'parent' of the element will be viewport. 
+        The way you would move elements with fixed positioning will be similar to how the example above. 
+        <br><br>
+        However, bear in mind that fixed will stay on top of your content and will stay in the same position even if you scroll. 
+        The two positioning types are affected by scrolling, which means the element will not follow you when you scroll.
+       <br><br>
         Elements with fixed positioning will move when the viewport is resized and it will sit infront of other content.
         Since fixed positioning is always relative to the viewport, it will stay in the same position even if you scroll down the page. 
 
     </p>
+
+    <img class="images" src="../images/fixed-position.png" alt="fixed position diagram">
     </div>
 </div>
+
+<footer class="footer"><p>All images provided by <a href="https://www.csssolid.com/css-position.html">csssolid</a>. All code is not to scale. :)    </p> </footer>
+
 </body>
+
 
 </html>
