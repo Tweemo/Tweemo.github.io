@@ -1,0 +1,78 @@
+<style>
+.title {
+    text-align: center;
+    display: block;
+    background-color: #e0fffc;
+    height: 50px;
+}
+
+.content {
+    max-width: 50%;
+    display: block;
+    padding-left: 400px;
+}
+
+.blog-link {
+    background-color: aquamarine;
+}
+</style>
+
+<html>
+    <head>
+    
+        <link href="../styles/main.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <title>
+        Tim Liew
+        </title>   
+    </head>
+
+<body>
+   <h1 class="title"> What are the differences between relative, absolute, and fixed positioning?</h1>
+
+
+
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="blog-link" href="blog.html">Blog</a></li>
+    </ul>
+
+    <div class="content">
+        <h3>Document flow</h3>
+    <p>Before I get into the difference between relative, absolute and fixed positioning, I need to explain what document flow is.
+        Document flow is the arrangement of page elements based off CSS positioning and the order of HTML.
+        Document flow will normally follow the order in which the elements are entered into HTML which wil be left to right unless they are blocks which mean the order will be top to bottom.
+        CSS positioning allows the elements in this flow to be moved and different positioning will affect the flow differently.
+    </p>
+
+    <h3>Relative Positioning</h3>
+    <p>Relative positioning means that the element that you are moving will be moved in relation to where it would have gone originally. 
+        To put it into context, if the box was going to be placed here, if we use position:relative; top: 100px; then the element will 100px away from the top edge.
+    It is important to be aware relative position does not move the element away from the document flow. 
+    This means that even though we perceive the element at a different position, it still occupies the original space.</p>
+<h3>Absolute Positioning</h3>
+    <p>
+        absolute positioning means that the element will be positioned in relation to the nearest containing element with a position.
+        This means that with absolute positioning it will always involve two elements that have positions, one being the 'parent' element and the 'child'.
+        When we give a position for the 'child' element it will use the side of the 'parent' and compare it to the same 'child' side. 
+        For example; If we give the 'child' a position: absolute; left: 30px; This will move the 'child' element so that its left side will be 30px away from the 'parents' left side. 
+        elements with absolute positioning ARE removed from the document flow. 
+        Which means that elements originally below our 'child' element will move up to fill in the space as the 'child' has been position elsewhere.
+
+    </p>
+<h3>Fixed Positioning</h3>
+    <p>
+        Fixed positioning is positioning based on the viewport (browser), this means the 'parent' of the element will be viewport. 
+        Elements with fixed positioning will move when the viewport is resized and it will sit infront of other content.
+        Since fixed positioning is always relative to the viewport, it will stay in the same position even if you scroll down the page. 
+
+    </p>
+    </div>
+</div>
+</body>
+
+</html>
