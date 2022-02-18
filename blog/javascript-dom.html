@@ -6,16 +6,31 @@
     height: 50px;
 }
     
-    .content {
-        display: block;
-        max-width: 50%;
-        padding-left: 400px;
-    }
+.content {
+    display: block;
+    max-width: 50%;
+    padding-left: 400px;
+}
     
-    .javascript-dom {
-        background-color: aquamarine;
-    }
-    </style>
+.javascript-dom {
+    background-color: aquamarine;
+}
+
+.rng-image {
+    max-width: 35%;
+    max-height: 35%;  
+}
+
+.DOM-tree {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.functions {
+    max-width: 50%;
+    max-height: 50%;
+}
+</style>
     
     <html>
         <head>
@@ -25,7 +40,7 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-            <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+            <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
             <title>
             Javascript DOM
             </title>   
@@ -49,15 +64,17 @@
         <h3>Website Basics</h3>
     
         <p>
-            A Basic website will contain 3 main components, these components are HTML, CSS and Javascript or JS for short. 
+            A basic website will contain 3 main components, HTML, CSS and Javascript or JS for short. 
             <br><br>
-            HTML is the content that will be on the page, so all the headers, sentences and pictures. 
+            HTML is the content that will be on the page, headers, sentences and pictures etc... 
             <br>
-            CSS is how that content is styled, so CSS works to make things look pretty and adjust the spacings between all the content on the page. 
+            CSS is how that content is styled, so CSS works to make things look pretty and adjust the spacings and positioning between all the content on the page. 
             <br>
             JS is used to create interactive elements, which means anything interactive would have been built with javascript. 
             <br><br>
             An example: A button that generates a random number each time it is pressed. 
+            <br><br>
+            <img class="rng-image" src="../images/rng.png" alt="RNG demo">
             <br><br>
             HTML: Will be the button and the name of the button. 
             <br>
@@ -69,19 +86,20 @@
         <h3>An analogy to describe the differences between HTML and CSS</h3>
         <p>
             A way to visualise the difference HTML and CSS would be to compare them to a skeleton and skin, respectively. 
-            HTML is the structure that keeps things together and CSS is what is added on top to make it look more appealing.         </p>
+            HTML is the foundation that keeps all the content together and CSS is what is added on top to make it look more appealing.         </p>
     
         <h3>Control Flow</h3>
         <p>
-            Control flow is essentially the order in which functions and statements will be run. 
+            Control flow is essentially the order the functions/code will be executed in. 
             The control flow for Javascript is top down, so the code will run starting from the top. 
             <br><br>
-            This also means functions can not use variables that have not been defined before it. 
+            This means functions can not use variables that have not been defined before it. 
             Which essentially means if you want to use a variable in a function, you should define it before the function so that it exists in the control flow. 
             Otherwise, you will try execute a function that uses something that doesn’t exist yet. 
             <br><br>
-            An example of control flow would be like shooting a basketball, the main actions or functions you need would be ‘get basketball’, ‘move ball into shooting position’, ‘bend legs’, ‘jump’, then ‘release the ball’. 
-            Now the order I mentioned them in would be how I would order it in javascript starting with ‘get basketball’ at the top and so on. 
+            An example of control flow would be like shooting a basketball. You would need to define the variable 'basketball', so make sure the basketball exists before you try to use it. 
+            Then the functions needed would be , ‘move ball into shooting position’, ‘bend legs’, ‘jump’, then ‘release the ball’. 
+            You can now visualise that you can't shoot a basketball without first defining or bringing the basketball into existence.  
         </p>
 
         <h3>Loopy Loops</h3>
@@ -89,14 +107,14 @@
             Loops are a function/bit of code that you can use to run the same code over and over with a different value. 
             <br><br>
             An example of a real life loop would be returning from a grocery shop and putting each item back in the cupboard or fridge. 
-            You ‘loop’ through the contents of the bag and for each item you would want to assign them to the ‘cupboard’ or ‘fridge’.   
+            You ‘loop’ through the contents of the bag and for each item you would want to assign them to the ‘cupboard’ or ‘fridge’. 
         </p>
         <h3>What is the DOM and how to interact with it</h3>
         <p>
             The DOM or Document Object Model is essentially like a tree structure of all the contents on a web page. 
             Starting from the top being the document itself, then ‘branching’ off into small components until you get into the HTML content. 
             <br><br>
-            <img src="INSERT IMAGE OF DOM TREE">
+            <img class="DOM-tree" src="../images/DOM-tree.png" alt="DOM tree">
             <br><br>
             Some ways you might interact with the DOM would be to breakdown elements of a webpage to see how it is structured. 
             You can also use the DOM to edit your own code so that you don’t have to save your code and reload the page. 
@@ -109,9 +127,10 @@
             <br>
             E.g [cats, dogs, fish] each value in this array has an assigned number. 
             <br>
-            Arrays start counting from 0, therefore, cats would be assigned [0], dogs [1] and fish [2].
+            Arrays start counting from 0, therefore, cats would be assigned [0], dogs [1] and fish [2]. 
+            This is important to note as when selecting certain content from an array you MUST take into account that it starts at 0 and not 1. 
             <br><br>
-            In contrast, objects has properties, which is like a feature of the object. 
+            In contrast, objects have properties, which is like a feature of the object. 
             <br>
             E.g object = car, has the properties, model, colour, brand, age. 
             <br>
@@ -121,14 +140,32 @@
 
         <h3>What are functions and why are they useful?</h3>
         <p>
-            Functions are a block of code designed to carryout a particular task, they are actioned when they are ‘called’ by something. 
+            Functions are blocks of code designed to carryout a particular task, they are actioned when they are ‘called’ by something. 
             Functions are useful when you want to push some values through code. 
             <br><br>
             For example; if you wanted the function to do some maths for you. 
             You could make a function that divides two values and all you would need to do is input the values that you want to divide. 
             There are endless uses for functions.  
+            <br>
+            <img class="functions" src="../images/function-multiple.png" alt="function that multiplies two values"> 
+            <br>
+            As you can see here this function will run two value through and multiply them together. 
+            However, if we still this code in, it is not going to do anything. 
+            Now we need to 'call' that function and then give it a destination to put the value. 
+            <br>
+            <img class="functions" src="../images/multiple-call.png" alt="code to call the multiple function">
+            <br>
+            Here you can see that we are firstly accessing the area we would like to call the function to. 
+            This is inside the 'document'and we want to target a certain 'id' and specify which id that is. 
+            The innerHTML is saying that we want to edit the innerHTML of the tag that has the id "multiple". 
+            The innerHTML is the empty text between the 'p' tags. 
+            After that the code is saying we want to change that empty text into the product of the function that is being called. 
+            Which in this case is 4 * 5, so we would then see that 20 would now be in those 'p' tags. 
+            
         </p>
+
     </div>
+
     </body>
     
     
