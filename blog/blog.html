@@ -1,21 +1,4 @@
 <style>
-.title {
-    text-align: center;
-    display: block;
-    background-color: #e0fffc;
-    height: 50px;
-}
-
-.content {
-    max-width: 50%;
-    display: block;
-    padding-left: 400px;
-}
-
-.blog-link {
-    background-color: aquamarine;
-}
-
 .footer {
     text-align: center;
 }
@@ -35,7 +18,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <title>
         Positioning
         </title>   
@@ -53,11 +36,12 @@
         <li><a href="identity-values.html">Identity and Values</a></li>
         <li><a href="emotional-intelligence.html">Emotional Intelligence</a></li>
         <li><a href="javascript-dom.html">Javascript DOM</a></li>
+        <li><a href="neuroplasticity.html">Neuroplasticity</a></li>
 
     </ul>
 
     <div class="content">
-        <h3>Document flow</h3>
+        <h2>Document flow</h2>
     <p>Before I get into the difference between relative, absolute and fixed positioning, I need to explain what document flow is.
         Document flow is the arrangement of page elements based off CSS positioning and the order of HTML.
         <br> <br>
@@ -70,7 +54,7 @@
     <img class="images" src="../images/static-position.png" alt="Static position diagram">
     <p>In this example, our elements are block elements which explains the top-down order.</p>
 
-    <h3>Relative Positioning</h3>
+    <h2>Relative Positioning</h2>
     <p>
     Relative positioning is a type of positioning that moves the desired element in relation to its original location. 
     It is important to be aware that relative position does not remove the element from the document flow and thus other elements will not fill the empty space.
@@ -90,7 +74,7 @@
     We can interpret that the left edge of our green box is now 60px from the box's original location. The same can be said about the top edge as it is 20px from where the top edge was. 
 
 
-<h3>Absolute Positioning</h3>
+<h2>Absolute Positioning</h2>
     <p>
         Absolute positioning is a type of positioning that shifts the element in relation to the nearest containing element with a position.
         Where there are two elements that have positions, the element we want to move is considered the 'child' and the nearest element with a position becomes the 'parent'.
@@ -106,7 +90,7 @@
     By using the code: <br><br> position: absolute; <br> top:100px; <br> left: 30px; <br><br> We can see that the box has a 100px space from the top and 30px space from the left. 
 </p>
 
-<h3>Fixed Positioning</h3>
+<h2>Fixed Positioning</h2>
     <p>
         Fixed positioning is a type of positioning based on the viewport/browser, this means the 'parent' of the element will be viewport/browser. 
         The way you would move elements with fixed positioning will be similar to how the example above. 
