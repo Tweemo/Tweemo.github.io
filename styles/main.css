@@ -33,6 +33,9 @@ li a {
     display: block;
     background-color: #e0fffc;
     height: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
 }
     
 .content {
@@ -41,30 +44,6 @@ li a {
     padding-left: 400px;
 }
 
-.blog-link {
-    background-color: aquamarine;
-}
-
-.index-link {
-    background-color: aquamarine;
-}
-
-.javascript-dom {
-    background-color: aquamarine;
-}
-
-.emotional-intelligence {
-    background-color: aquamarine;
-}
-
-.learning-plan {
-    background-color: aquamarine;
-}
-
-.identity {
-    background-color: aquamarine;
-}
-
-.neuroplasticity {
+.current-page {
     background-color: aquamarine;
 }
